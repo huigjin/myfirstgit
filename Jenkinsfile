@@ -1,8 +1,8 @@
 pipeline {
-    agent { docker { image '3pcc_tng:huigjin1.6' } }
+    agent none
     stages {
         stage('build') {
-            agent any
+            agent { label 'epbuild18' }
             steps {
                 sh 'uname'
                 sh 'echo "Hello World"'
